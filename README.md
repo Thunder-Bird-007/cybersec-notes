@@ -23,10 +23,7 @@ Documenting my path from zero to offensive security, one small session at a time
 
 | Date | Resource | Task | Key Takeaway |
 |------|----------|------|---------------|
-| YYYY-MM-DD | OverTheWire Bandit | Level 0→2 | e.g. learned ssh connection, ls, cat |
-| YYYY-MM-DD | TryHackMe | Learning Cyber Security | e.g. mapped out branches of cybersec |
-
-*(Add one row per session — keep entries to one line, specific and honest.)*
+| 2026-07-01 | OverTheWire Bandit | Level 0→1 | ssh reconnect requires the new level's username, not the old one |
 
 ---
 
