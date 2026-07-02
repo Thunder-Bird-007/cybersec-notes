@@ -16,3 +16,9 @@
 - File was named `-` (a single dash)
 - `cat -` reads from stdin instead — dash has special meaning to many commands
 - Fix: `cat ./-` forces it to be read as a literal filename in the current directory
+
+### Bandit 2 → 3
+- File was named `--spaces in this filename--` — contains spaces and starts with dashes
+- Unquoted, bash splits the name into separate arguments at each space, and the leading `--` gets read as a flag by cat
+- Fix: combine quoting and the ./ prefix — `cat ./'--spaces in this filename--'`
+- Quotes stop word-splitting; ./ stops the leading dash being read as an option
