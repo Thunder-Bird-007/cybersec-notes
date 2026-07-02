@@ -24,7 +24,7 @@ Documenting my path from zero to offensive security, one small session at a time
 | Date | Resource | Task | Key Takeaway |
 |------|----------|------|---------------|
 | 2026-07-01 | OverTheWire Bandit | Level 0→1 | ssh reconnect requires the new level's username, not the old one |
-
+| 2026-07-02 | OverTheWire Bandit | Level 1→2 | ./ forces a literal filename, even one that looks like a flag |
 ---
 
 ## Monthly Reflections

@@ -12,3 +12,7 @@
 
 - Learned: after finding the next level's password, you must reconnect using the \*\*new\*\* username (bandit1), not the old one — got "access denied" by forgetting this
 
+### Bandit 1 → 2
+- File was named `-` (a single dash)
+- `cat -` reads from stdin instead — dash has special meaning to many commands
+- Fix: `cat ./-` forces it to be read as a literal filename in the current directory
