@@ -26,6 +26,8 @@ Documenting my path from zero to offensive security, one small session at a time
 | 2026-07-01 | OverTheWire Bandit | Level 0→1 | ssh reconnect requires the new level's username, not the old one |
 | 2026-07-02 | OverTheWire Bandit | Level 1→2 | ./ forces a literal filename, even one that looks like a flag |
 | 2026-07-02 | OverTheWire Bandit | Level 2→3 | quotes stop word-splitting on spaces, ./ stops leading dashes being read as flags |
+| 2026-07-03 | OverTheWire Bandit | Level 3→4 | Hidden files begin with `.`, use `ls -a` to reveal them. |
+
 ---
 
 ## Monthly Reflections

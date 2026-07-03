@@ -22,3 +22,18 @@
 - Unquoted, bash splits the name into separate arguments at each space, and the leading `--` gets read as a flag by cat
 - Fix: combine quoting and the ./ prefix — `cat ./'--spaces in this filename--'`
 - Quotes stop word-splitting; ./ stops the leading dash being read as an option
+
+### Bandit 3 → 4
+
+The password was stored inside a hidden file located in the inhere directory.
+
+At first, running `ls` showed nothing because hidden files are not displayed by default.
+
+Using:
+
+ls -a
+
+revealed the hidden file. After identifying it, I used `cat` to read its contents and obtained the password for the next level.
+
+Key lesson:
+Files whose names begin with `.` are hidden in Linux. When a directory appears empty, `ls -a` should be one of the first commands to try.
