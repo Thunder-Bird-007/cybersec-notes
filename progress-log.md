@@ -62,3 +62,18 @@ This immediately narrowed the search to the correct hidden file. After locating 
 Key lessons:
 - `find` searches files by their properties instead of filtering command output.
 - Hidden files are not matched by the `*` wildcard, which explained why my earlier wildcard-based commands missed the correct file.
+
+### Bandit 6 → 7
+
+The task required finding a file across the entire system with three conditions: specific user ownership (bandit7), group ownership (bandit6), and an exact size of 33 bytes.
+
+Initially, I explored using wildcards and text filtering, but these approaches were inefficient for system-wide search.
+
+The solution was to use the `find` command with multiple filters combined:
+
+find / -user bandit7 -group bandit6 -size 33c
+
+This allowed Linux to directly search the filesystem and return the exact file matching all conditions.
+
+Key lesson:
+`find` can combine multiple properties (user, group, size) in a single command, making it powerful for system-wide enumeration without manual directory traversal.
