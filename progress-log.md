@@ -46,3 +46,19 @@ Instead of opening every file one by one, I first identified which file was like
 
 Key lesson:
 The `file` command determines a file's type from its contents instead of relying on its filename or extension. This is useful when filenames give little or no information.
+
+### Bandit 5 → 6
+
+The password was hidden inside one of many files spread across multiple directories.
+
+I first used the `file` command to identify human-readable files, but there were still many candidates. The level description also specified that the target file had an exact size and was not executable.
+
+Instead of manually checking every file, I used:
+
+find . -size 1033c
+
+This immediately narrowed the search to the correct hidden file. After locating it, I used `cat` to read the password.
+
+Key lessons:
+- `find` searches files by their properties instead of filtering command output.
+- Hidden files are not matched by the `*` wildcard, which explained why my earlier wildcard-based commands missed the correct file.
