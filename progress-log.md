@@ -37,3 +37,12 @@ revealed the hidden file. After identifying it, I used `cat` to read its content
 
 Key lesson:
 Files whose names begin with `.` are hidden in Linux. When a directory appears empty, `ls -a` should be one of the first commands to try.
+
+### Bandit 4 → 5
+
+The password was hidden among several files inside the inhere directory.
+
+Instead of opening every file one by one, I first identified which file was likely to contain readable text by using the `file` command. After finding the human-readable file, I used `cat` to display its contents and obtain the password.
+
+Key lesson:
+The `file` command determines a file's type from its contents instead of relying on its filename or extension. This is useful when filenames give little or no information.
