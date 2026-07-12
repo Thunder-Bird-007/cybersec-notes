@@ -12,9 +12,9 @@ Documenting my path from zero to offensive security, one small session at a time
 `Stage 0 — Orientation / Foundations (Week 1)`
 
 ## Stats
-- Weeks completed: 0
-- TryHackMe rooms completed: 0
-- OverTheWire Bandit levels completed: 0
+- Weeks completed: 0 (currently in Week 1)
+- TryHackMe rooms completed: 3
+- OverTheWire Bandit levels completed: 7 (0→7)
 - Certifications: None yet (target: eJPT around month 8-10)
 
 ---
