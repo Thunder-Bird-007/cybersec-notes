@@ -77,3 +77,14 @@ This allowed Linux to directly search the filesystem and return the exact file m
 
 Key lesson:
 `find` can combine multiple properties (user, group, size) in a single command, making it powerful for system-wide enumeration without manual directory traversal.
+
+
+### TryHackMe — Module 1: Introduction to Cyber Security
+
+Completed the three rooms in this module: Offensive Security Intro, Defensive Security Intro, and Careers in Cyber.
+
+**Offensive Security Intro:** Offensive security means simulating attacker behavior to find weaknesses before real attackers do. Hands-on exercise used Gobuster, a directory-busting tool, to enumerate hidden pages on a target website that weren't linked anywhere visible.
+
+**Defensive Security Intro:** Introduced the Blue Team (defenders) as the counterpart to Red Team (attackers). Defensive security has two core jobs: preventing attacks (patching, hardening) and detecting/responding fast when prevention fails. Key lesson from the SOC dashboard exercise: when a suspicious IP shows up in logs, correlate it with the user, host, time, and related alerts before acting — don't block on a single data point, that's how false positives and broken legitimate traffic happen.
+
+**Careers in Cyber:** Overview of cyber security roles — Security Analyst, Security Engineer, Incident Responder, Malware Analyst, Penetration Tester, Red Teamer. Penetration Tester lines up most directly with my eJPT/offensive-security goal. Distinction that stuck: pentesting is generally scoped and defenders know it's happening, while red teaming is a stealthier full-scale adversary simulation the defense team usually isn't told about in advance — it tests detection, not just exploitability.
