@@ -29,6 +29,8 @@ Documenting my path from zero to offensive security, one small session at a time
 | 2026-07-03 | OverTheWire Bandit | Level 3→4 | Hidden files begin with `.`, use `ls -a` to reveal them. |
 | 2026-07-03 | OverTheWire Bandit | Level 4→5 | Use `file` to identify a file's actual type before reading it. |
 | 2026-07-03 | OverTheWire Bandit | Level 5→6 | Learned to use `find` to search files by properties (size), and discovered that `*` wildcards do not match hidden files. |
+| 2026-07-03 | OverTheWire Bandit | Level 6→7 | Used `find` with multiple filters (-user, -group, -size) to locate a file across the entire filesystem. |
+| 2026-07-12 | TryHackMe | Pre Security — Module 1: Intro to Cyber Security (all 3 rooms) | Blue Team vs Red Team; pentester vs red teamer distinction; Gobuster for hidden-page enumeration |
 
 ---
 
