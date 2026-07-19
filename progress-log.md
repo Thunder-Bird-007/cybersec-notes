@@ -88,3 +88,9 @@ Completed the three rooms in this module: Offensive Security Intro, Defensive Se
 **Defensive Security Intro:** Introduced the Blue Team (defenders) as the counterpart to Red Team (attackers). Defensive security has two core jobs: preventing attacks (patching, hardening) and detecting/responding fast when prevention fails. Key lesson from the SOC dashboard exercise: when a suspicious IP shows up in logs, correlate it with the user, host, time, and related alerts before acting — don't block on a single data point, that's how false positives and broken legitimate traffic happen.
 
 **Careers in Cyber:** Overview of cyber security roles — Security Analyst, Security Engineer, Incident Responder, Malware Analyst, Penetration Tester, Red Teamer. Penetration Tester lines up most directly with my eJPT/offensive-security goal. Distinction that stuck: pentesting is generally scoped and defenders know it's happening, while red teaming is a stealthier full-scale adversary simulation the defense team usually isn't told about in advance — it tests detection, not just exploitability.
+
+### Bandit Level 7 → 8
+**Goal:** Password stored in `data.txt`, next to the word "millionth"
+**Command:** `grep "millionth" data.txt`
+**Technique:** Used grep to search file contents for a text pattern, rather than find (which searches the filesystem for files by attribute). grep streams the file line-by-line, so it stays fast even on large files.
+**Date:** 2026-07-19
