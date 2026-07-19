@@ -114,3 +114,16 @@ sort data.txt | uniq -u
 
 Key lesson:
 `sort | uniq -u` is a common pattern for finding anomalies or one-off entries in a large list — useful beyond this challenge for log analysis or spotting outliers in data.
+
+### Bandit Level 9 → 10
+
+`data.txt` wasn't a plain text file this time — running `file data.txt` showed it was binary/non-text data, so `cat` wouldn't give clean output.
+
+I used:
+
+strings data.txt | grep "==="
+
+`strings` extracts sequences of printable characters from a file regardless of whether the file itself is binary or text — it doesn't care about the file's overall type, it just pulls out anything readable. Piping that to `grep "==="` narrowed the output down to the one line matching the hint (password preceded by several `=` characters).
+
+Key lesson:
+`strings` is the tool for finding readable text buried inside binary data — different from `file`, which identifies the type of a file, and different from `cat`, which only works cleanly on files that are already plain text.
