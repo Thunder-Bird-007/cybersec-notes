@@ -90,7 +90,27 @@ Completed the three rooms in this module: Offensive Security Intro, Defensive Se
 **Careers in Cyber:** Overview of cyber security roles — Security Analyst, Security Engineer, Incident Responder, Malware Analyst, Penetration Tester, Red Teamer. Penetration Tester lines up most directly with my eJPT/offensive-security goal. Distinction that stuck: pentesting is generally scoped and defenders know it's happening, while red teaming is a stealthier full-scale adversary simulation the defense team usually isn't told about in advance — it tests detection, not just exploitability.
 
 ### Bandit Level 7 → 8
-**Goal:** Password stored in `data.txt`, next to the word "millionth"
-**Command:** `grep "millionth" data.txt`
-**Technique:** Used grep to search file contents for a text pattern, rather than find (which searches the filesystem for files by attribute). grep streams the file line-by-line, so it stays fast even on large files.
-**Date:** 2026-07-19
+
+The password was stored in `data.txt`, next to the word "millionth" — but the file was too large to scroll through manually.
+
+I used:
+
+grep "millionth" data.txt
+
+This searched the file's contents for the pattern instead of searching the filesystem for a file (which is what `find` does). Because `grep` streams through a file line-by-line rather than loading the whole thing into memory, it stayed fast even on a large file.
+
+Key lesson:
+`grep` searches *inside* file contents for a text pattern, while `find` searches the filesystem for files matching attributes like name, size, owner, or group. They solve different problems and are often used together.
+
+### Bandit Level 8 → 9
+
+The password was the one line in `data.txt` that appeared only once — everything else was duplicated.
+
+I used:
+
+sort data.txt | uniq -u
+
+`uniq` only compares *adjacent* lines, so duplicates have to be next to each other before it can detect them — that's why `sort` had to run first. The `-u` flag then prints only the lines that have no duplicates at all (plain `uniq` with no flags just collapses consecutive duplicates down to one copy, but still prints them).
+
+Key lesson:
+`sort | uniq -u` is a common pattern for finding anomalies or one-off entries in a large list — useful beyond this challenge for log analysis or spotting outliers in data.

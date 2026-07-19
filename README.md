@@ -9,7 +9,7 @@ Documenting my path from zero to offensive security, one small session at a time
 ## Stats
 - Weeks completed: 0 (currently in Week 1)
 - TryHackMe rooms completed: 3
-- OverTheWire Bandit levels completed: 8 (0→8)
+- OverTheWire Bandit levels completed: 9 (0→9)
 - Certifications: None yet (target: eJPT around month 8-10)
 ---
 ## Progress Log
@@ -24,6 +24,7 @@ Documenting my path from zero to offensive security, one small session at a time
 | 2026-07-03 | OverTheWire Bandit | Level 6→7 | Used `find` with multiple filters (-user, -group, -size) to locate a file across the entire filesystem. |
 | 2026-07-12 | TryHackMe | Pre Security — Module 1: Intro to Cyber Security (all 3 rooms) | Blue Team vs Red Team; pentester vs red teamer distinction; Gobuster for hidden-page enumeration |
 | 2026-07-19 | OverTheWire Bandit | Level 7→8 | `grep` searches file contents for a text pattern (vs `find`, which searches the filesystem by attribute); grep streams line-by-line so it stays fast on large files. |
+| 2026-07-19 | OverTheWire Bandit | Level 8→9 | `sort` orders lines so `uniq -u` (which only compares adjacent lines) can isolate the one line with no duplicate |
 ---
 ## Monthly Reflections
 ### Month 1
