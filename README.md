@@ -5,11 +5,11 @@ Documenting my path from zero to offensive security, one small session at a time
 **Method:** Small daily sessions (~20 min) + spaced repetition (Anki) + weekend application
 ---
 ## Current Stage
-`Stage 0 — Orientation / Foundations (Week 1)`
+`Stage 1 — Foundations (Week 3, started 2026-07-01)`
 ## Stats
-- Weeks completed: 0 (currently in Week 1)
+- Weeks completed: 2 (started 2026-07-01, currently in Week 3)
 - TryHackMe rooms completed: 3
-- OverTheWire Bandit levels completed: 9 (0→9)
+- OverTheWire Bandit levels completed: 10 (0→10)
 - Certifications: None yet (target: eJPT around month 8-10)
 ---
 ## Progress Log
@@ -25,6 +25,7 @@ Documenting my path from zero to offensive security, one small session at a time
 | 2026-07-12 | TryHackMe | Pre Security — Module 1: Intro to Cyber Security (all 3 rooms) | Blue Team vs Red Team; pentester vs red teamer distinction; Gobuster for hidden-page enumeration |
 | 2026-07-19 | OverTheWire Bandit | Level 7→8 | `grep` searches file contents for a text pattern (vs `find`, which searches the filesystem by attribute); grep streams line-by-line so it stays fast on large files. |
 | 2026-07-19 | OverTheWire Bandit | Level 8→9 | `sort` orders lines so `uniq -u` (which only compares adjacent lines) can isolate the one line with no duplicate |
+| 2026-07-19 | OverTheWire Bandit | Level 9→10 | `strings` extracts human-readable text from binary files; piped to `grep "==="` to isolate the password line |
 ---
 ## Monthly Reflections
 ### Month 1
