@@ -9,7 +9,7 @@ Documenting my path from zero to offensive security, one small session at a time
 ## Stats
 - Weeks completed: 3 (started 2026-07-01, currently in Week 4)
 - TryHackMe rooms completed: 3
-- OverTheWire Bandit levels completed: 11 (0→11)
+- OverTheWire Bandit levels completed: 12 (0→12)
 - Certifications: None yet (target: eJPT around month 8-10)
 ---
 ## Progress Log
@@ -27,6 +27,7 @@ Documenting my path from zero to offensive security, one small session at a time
 | 2026-07-19 | OverTheWire Bandit | Level 8→9 | `sort` orders lines so `uniq -u` (which only compares adjacent lines) can isolate the one line with no duplicate |
 | 2026-07-19 | OverTheWire Bandit | Level 9→10 | `strings` extracts human-readable text from binary files; piped to `grep "==="` to isolate the password line |
 | 2026-07-22 | OverTheWire Bandit | Level 10→11 | `base64 --decode` reverses base64 encoding instantly with no key — encoding isn't encryption, it's just a text-safe format conversion |
+| 2026-07-22 | OverTheWire Bandit | Level 11→12 | `tr 'A-Za-z' 'N-ZA-Mn-za-m'` implements ROT13 — a keyless cipher where applying it twice returns the original text |
 ---
 ## Monthly Reflections
 ### Month 1

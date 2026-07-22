@@ -140,3 +140,16 @@ This reversed the encoding directly and printed the password in plain text.
 
 Key lesson:
 Base64 is an encoding scheme, not encryption — it converts binary data into text-safe characters, but anyone can reverse it instantly with a single command and no key or password. It's a format conversion, not a security mechanism, which matters in offensive security: things that look "hidden" or "obfuscated" (like base64 blobs) are often trivially reversible once you recognize the pattern.
+
+### Bandit Level 11 → 12
+
+`file data.txt` showed ASCII text again, and `cat` printed something that looked like a sentence but scrambled — spaces were still in the right places, unlike Level 10's base64 blob (which has no spaces at all). That was the tell this wasn't base64. Recognizing the sentence shape (`Gur cnffjbeq vf` matching "The password is") pointed to ROT13 — a Caesar cipher that shifts each letter 13 positions.
+
+I used:
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+`tr` maps each character in the first set to the corresponding character in the second set, position by position. The range has to be split into N-Z then A-M (not one continuous run) because shifting by 13 wraps past Z back around to A — the split represents that wraparound explicitly.
+
+Key lesson:
+ROT13 is a keyless substitution cipher — applying it twice returns the original text, since 13 is exactly half of the 26-letter alphabet. `tr` is a general-purpose character-mapping tool that can implement this kind of substitution without a dedicated command.
