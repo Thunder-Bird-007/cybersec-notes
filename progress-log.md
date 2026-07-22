@@ -127,3 +127,16 @@ strings data.txt | grep "==="
 
 Key lesson:
 `strings` is the tool for finding readable text buried inside binary data — different from `file`, which identifies the type of a file, and different from `cat`, which only works cleanly on files that are already plain text.
+
+### Bandit Level 10 → 11
+
+`file data.txt` confirmed this one actually was plain ASCII text (unlike Level 9's binary file), so `cat` worked cleanly. What it printed back wasn't human-readable though — a block of letters, digits, and `==` padding at the end.
+
+I recognized the pattern as base64 and ran:
+
+base64 --decode data.txt
+
+This reversed the encoding directly and printed the password in plain text.
+
+Key lesson:
+Base64 is an encoding scheme, not encryption — it converts binary data into text-safe characters, but anyone can reverse it instantly with a single command and no key or password. It's a format conversion, not a security mechanism, which matters in offensive security: things that look "hidden" or "obfuscated" (like base64 blobs) are often trivially reversible once you recognize the pattern.
